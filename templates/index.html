@@ -27,7 +27,21 @@
 
   <section>
     <h2>Top suspicious IPs</h2>
-    <table id="top-ips"><thead><tr><th>IP</th><th>Warnings + errors</th></tr></thead><tbody></tbody></table>
+    <table id="top-ips"><thead><tr><th>IP</th><th>Warnings + errors</th><th>Action</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section>
+    <h2>Suggested blocks</h2>
+    <p class="note">Addresses with at least
+      <input id="threshold" type="number" min="1" value="30" class="num"> warnings or errors.
+      Nothing is blocked until you confirm.</p>
+    <table id="suggest"><thead><tr><th>IP</th><th>Warnings + errors</th><th>Action</th></tr></thead><tbody></tbody></table>
+    <button id="block-all" type="button">Block all suggested</button>
+  </section>
+
+  <section>
+    <h2>Blocklist (simulated firewall)</h2>
+    <table id="blocklist"><thead><tr><th>IP</th><th>Since</th><th>Reason</th><th>Action</th></tr></thead><tbody></tbody></table>
   </section>
 
   <section>
@@ -42,6 +56,13 @@
     </label>
     <div class="scroll">
       <table id="events"><thead><tr><th>Time</th><th>Level</th><th>Service</th><th>IP</th><th>Message</th></tr></thead><tbody></tbody></table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Audit log</h2>
+    <div class="scroll">
+      <table id="audit"><thead><tr><th>Time</th><th>Action</th><th>IP</th><th>By</th><th>Detail</th></tr></thead><tbody></tbody></table>
     </div>
   </section>
 </main>

@@ -20,3 +20,10 @@ th { color:var(--muted); font-weight:600; }
 .scroll { overflow-x:auto; margin-top:8px; }
 select { background:var(--card); color:var(--text); border:1px solid #334155; border-radius:6px; padding:4px 8px; }
 .lv-INFO { color:var(--info); } .lv-WARNING { color:var(--warn); } .lv-ERROR { color:var(--err); }
+
+button { background:var(--card); color:var(--text); border:1px solid #334155; border-radius:6px; padding:4px 10px; cursor:pointer; }
+button:hover { border-color:var(--info); }
+button.danger { color:var(--err); border-color:var(--err); }
+.note { color:var(--muted); font-size:.85rem; }
+input.num { width:64px; background:var(--card); color:var(--text); border:1px solid #334155; border-radius:6px; padding:2px 6px; }
+.toast { position:fixed; bottom:16px; left:50%; transform:translateX(-50%); background:#000; color:#fff; padding:8px 14px; border-radius:8px; font-size:.9rem; }

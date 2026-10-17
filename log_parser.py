@@ -40,6 +40,12 @@ def load_events(path):
     return events
 
 
+def suggest_blocks(events, threshold):
+    """IPs with at least `threshold` warnings/errors (candidates only, nothing is blocked)."""
+    counts = Counter(e["ip"] for e in events if e["level"] != "INFO")
+    return [{"ip": ip, "count": n} for ip, n in counts.most_common() if n >= threshold]
+
+
 def summarize(events):
     levels = Counter(e["level"] for e in events)
     per_hour = [0] * 24
